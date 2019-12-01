@@ -15,20 +15,21 @@ function solve(input)
         command = input.shift();
         if (command == "Going home")
         {
-            command = input.shift();
-            stepsCounter += Number(command);
-
-            if (stepsCounter >= goal)
-            {
-            console.log(`Goal reached! Good job!`);
-            return;
-            }
-            else
-            {
-                console.log(`${goal - stepsCounter} more steps to reach goal.`);
-                return;
-            }
+            break;
         }
     }
+    command = input.shift();
+    stepsCounter += Number(command);
+
+        if (stepsCounter >= goal)
+        {
+        console.log(`Goal reached! Good job!`);
+            return;
+        }
+        else
+        {
+        console.log(`${goal - stepsCounter} more steps to reach goal.`);
+            return;
+        }
 }
 solve(["1500", "300", "2500", "3000", "Going home", "200"])
